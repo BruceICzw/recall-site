@@ -16,7 +16,7 @@ build.mjs          src/ → dist/ with placeholders filled (no npm install neede
    - `siteUrl`: where this site will live, e.g. `https://recall-search.netlify.app`. Pick the name on Netlify/Vercel first.
    - `repoUrl`: the extension's GitHub repo
    - `contactEmail`: shown in the privacy policy
-   - `storeUrl`: leave empty until the Chrome Web Store approves Recall
+   - `storeUrl`: where the download buttons point. Until the store approves Recall it's the GitHub release (`…/releases/latest`), and the buttons say "Download". Once it's a Chrome Web Store URL, they switch to "Add to Chrome".
 2. Preview locally: run `node build.mjs`, then open `dist/index.html`.
 3. Push to GitHub and import the repo:
    - **Netlify:** Add new site → Import from Git. `netlify.toml` sets the build to `node build.mjs` and publishes `dist`.
