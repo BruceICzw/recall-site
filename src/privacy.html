@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy policy · Recall</title>
+  <meta name="description" content="How the Recall Chrome extension handles your data: everything stays on your device." />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap nav">
+    <a class="brand" href="./" aria-label="Recall home">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#128672"/><path d="M10.5 21.5V10.5h6.25a4.25 4.25 0 0 1 0 8.5H13.5l6.5 6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22.5" cy="10.5" r="1.9" fill="#fff" opacity=".85"/></svg>
+      Recall
+    </a>
+    <nav class="nav-links" aria-label="Primary"><a href="./">Home</a><a class="btn btn-primary btn-sm" href="__STORE_URL__">Add to Chrome</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <article class="legal">
+      <h1>Privacy policy</h1>
+      <p><strong>Effective 10 November 2026.</strong> This policy covers the Recall browser extension ("Recall") and this website. Recall is published by Bruce Chigwa ("I", "me").</p>
+
+      <div class="callout"><p><strong>In short:</strong> Recall collects your browsing history and, if you allow it, the text of pages you visit, so that you can search them. All of it is stored and processed only on your own computer. Nothing is sent to me or to anyone else. There are no servers, accounts, analytics or ads.</p></div>
+
+      <h2>1. What Recall collects</h2>
+      <p>Recall handles two kinds of data, both only after you agree to the disclosure shown when you install it:</p>
+      <table>
+        <thead><tr><th>Data</th><th>What exactly</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Web history</strong></td><td>Addresses (URLs), page titles and visit times of pages you visit. On setup, the same details are imported from Chrome's history for a period you choose (90 days by default).</td><td>To list and search the pages you've visited.</td></tr>
+          <tr><td><strong>Website content</strong></td><td>The readable text of pages you visit, plus each page's description, canonical address and publication date where available. Collected only if you turn on page content indexing.</td><td>To find pages by what they were about, not just their titles.</td></tr>
+        </tbody>
+      </table>
+      <p>From these, Recall creates <strong>derived data</strong> on your computer: text passages ("chunks"), numerical representations of their meaning ("embeddings"), and an indexing queue. It also stores <strong>your own inputs</strong>: recent searches, pages you save, sites you exclude, and your settings.</p>
+
+      <h3>What Recall never collects</h3>
+      <ul>
+        <li>Anything in Incognito windows. Recall is not allowed to run there.</li>
+        <li>Passwords, form inputs, cookies, authentication tokens or payment details.</li>
+        <li>The content of pages with password or card fields, or of banking, payment, email, login, checkout and account pages. This is on by default and can be changed in Settings.</li>
+        <li>The content of any site you exclude.</li>
+        <li>Your location, contacts, keystrokes, mouse movements or anything outside the browser.</li>
+      </ul>
+
+      <h2>2. Where your data is stored</h2>
+      <p>All of the above is stored in the extension's private database (IndexedDB) on your device, inside your Chrome profile. The AI model that understands your searches is bundled with the extension and runs on your device.</p>
+      <p><strong>Recall does not transmit your data anywhere.</strong> It has no backend server, makes no analytics or telemetry calls, and does not use third-party AI services. If you use Chrome Sync, Recall's database is <em>not</em> synced; it stays on the computer where it was created.</p>
+      <p>The extension makes no network requests during normal use. The only exception is a developer build that doesn't include the AI model: it downloads the model files once from huggingface.co. That request contains no personal data, and published store builds include the model.</p>
+
+      <h2>3. How your data is used</h2>
+      <p>Your data is used only to provide Recall's single purpose: letting you search, view and reopen pages you have visited. It is not used for advertising, profiling, credit or lending decisions, or any other purpose, and no human (including me) can access it.</p>
+
+      <h2>4. Sharing</h2>
+      <p>I do not sell, rent, share or transfer your data to anyone. Since it never leaves your device, I have no access to it.</p>
+
+      <h2>5. Your choices and controls</h2>
+      <ul>
+        <li><strong>Consent:</strong> nothing is recorded until you click "Agree and start". You can withdraw at any time: Settings → Turn off Recall stops recording and deletes everything.</li>
+        <li><strong>Page content:</strong> choose full text or titles and addresses only. You can also revoke Recall's permission to read pages in Settings or in Chrome's extension settings.</li>
+        <li><strong>Pause</strong> indexing at any time.</li>
+        <li><strong>Exclude</strong> any website and optionally delete what was already stored from it.</li>
+        <li><strong>Delete</strong> a single page from search results, or clear all data in Settings. Deleting in Recall never deletes your Chrome history.</li>
+        <li><strong>Follow Chrome deletions:</strong> by default, when you delete history in Chrome, Recall removes the same pages (saved pages are kept).</li>
+        <li><strong>Export</strong> everything Recall stores as a JSON file.</li>
+        <li><strong>Uninstall:</strong> removing the extension deletes its database.</li>
+      </ul>
+
+      <h2>6. Retention</h2>
+      <p>Data is kept on your device until you delete it, exclude the site, remove the page from Chrome history (with the default setting), turn off Recall, or uninstall the extension.</p>
+
+      <h2>7. Security</h2>
+      <p>Your data is protected by your device and Chrome profile. Anyone with access to your unlocked computer and Chrome profile could use Recall to search your history, just as they could open Chrome's history page. An exported file contains your browsing history, so store it carefully.</p>
+
+      <h2>8. Children</h2>
+      <p>Recall is not directed at children under 13 and does not knowingly collect data from them. In any case, nothing is collected off-device.</p>
+
+      <h2 id="limited-use">9. Chrome Web Store User Data Policy: Limited Use</h2>
+      <p>The use of information received from Chrome APIs by Recall adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Specifically, Recall:</p>
+      <ul>
+        <li>uses web browsing activity and website content only to provide its user-facing search feature;</li>
+        <li>does not transfer this data to anyone;</li>
+        <li>does not use or transfer it for personalised advertising;</li>
+        <li>does not use or transfer it to determine creditworthiness or for lending purposes;</li>
+        <li>does not allow any human to read it.</li>
+      </ul>
+
+      <h2>10. This website</h2>
+      <p>This site uses no cookies, analytics, trackers or third-party scripts, fonts or embeds. The hosting provider may keep standard server logs (such as IP addresses) for security and operations, under its own policy.</p>
+
+      <h2>11. Changes</h2>
+      <p>If this policy changes, the new version will be posted here with a new effective date. If a change affects what Recall collects or how it's used, the extension will ask for your consent again before applying it.</p>
+
+      <h2>12. Contact</h2>
+      <p>Questions or requests: <a href="mailto:__CONTACT_EMAIL__">__CONTACT_EMAIL__</a>, or open an issue at <a href="__REPO_URL__/issues">__REPO_URL__/issues</a>. You can check every statement above in the <a href="__REPO_URL__">source code</a>.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div><a href="./">Home</a><a href="__REPO_URL__">Source code</a></div>
+      <div>© 2026 Bruce Chigwa · MIT licensed</div>
+    </div>
+  </footer>
+</body>
+</html>

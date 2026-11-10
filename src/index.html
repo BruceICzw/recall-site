@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recall: search your browsing history by memory</title>
+  <meta name="description" content="Recall is a free, private Chrome extension that finds pages you've visited when you only remember what they were about. Natural-language search, on-device AI, nothing leaves your computer." />
+  <meta property="og:title" content="Recall: find anything you've visited online" />
+  <meta property="og:description" content="Describe what you remember. Recall finds where you saw it. Private, on-device, free." />
+  <meta property="og:image" content="__SITE_URL__/og.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#128672" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap nav">
+    <a class="brand" href="./" aria-label="Recall home">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#128672"/><path d="M10.5 21.5V10.5h6.25a4.25 4.25 0 0 1 0 8.5H13.5l6.5 6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22.5" cy="10.5" r="1.9" fill="#fff" opacity=".85"/></svg>
+      Recall
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="hide-sm" href="#how">How it works</a>
+      <a class="hide-sm" href="#privacy">Privacy</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="__STORE_URL__">Add to Chrome</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/></svg>
+          Free · Private · Runs on your device
+        </span>
+        <h1>You remember what you saw. <em>Recall finds where.</em></h1>
+        <p class="lede">
+          Recall is a Chrome extension that searches the pages you've visited by what they were <em>about</em>.
+          Describe it the way you remember it, and you'll find it without the site name, the address or the exact words.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="__STORE_URL__">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
+            Add to Chrome, it's free
+          </a>
+          <a class="btn btn-ghost" href="__REPO_URL__">View the source</a>
+        </div>
+        <p class="cta-note">Works with Chrome on Windows, macOS and Linux. No account needed.</p>
+      </div>
+
+      <div class="mock" aria-label="Example: searching Recall" role="img">
+        <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="query">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--faint)" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span><span id="typed">that AI tutor website I visited in Zimbabwe</span><span class="caret" aria-hidden="true"></span></span>
+        </div>
+        <div class="meta-line" id="meta">2 results · 38 ms</div>
+        <div class="result" id="r1">
+          <div class="t"><span id="r1t">LearnZim: smart learning for every student</span><span class="badge">High match</span></div>
+          <div class="d" id="r1d">learnzim.example · Visited 3 days ago</div>
+          <p id="r1p">…gives secondary school students in <mark>Zimbabwe</mark> a personal <mark>AI tutor</mark> that explains maths and science step by step…</p>
+        </div>
+        <div class="result fade" id="r2">
+          <div class="t"><span id="r2t">The promise and limits of AI in African classrooms</span><span class="badge alt">Good match</span></div>
+          <div class="d" id="r2d">edresearch.example · Visited last week</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="alt-bg" aria-labelledby="examples-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="examples-h">Search the way you remember</h2>
+          <p>Chrome's history only matches titles and addresses. Recall understands what each page was about, so vague, half-remembered searches still work.</p>
+        </div>
+        <div class="examples">
+          <span class="chip">the article explaining how vector databases work</span>
+          <span class="chip">construction project management software</span>
+          <span class="chip">tutorial about deploying Next.js with PM2 last week</span>
+          <span class="chip">African property management SaaS</span>
+          <span class="chip">site comparing payment gateways</span>
+          <span class="chip">github repo for African language speech recognition</span>
+          <span class="chip">that homemade pizza recipe</span>
+          <span class="chip">something about load shedding and solar batteries</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-h">How it works</h2>
+          <p>There's nothing to organise or tag. Just keep browsing.</p>
+        </div>
+        <div class="grid3">
+          <div class="card">
+            <div class="step-n">1</div>
+            <h3>Browse normally</h3>
+            <p>As you read, Recall saves each page's readable text to a private index on your computer. Your existing Chrome history is imported too.</p>
+          </div>
+          <div class="card">
+            <div class="step-n">2</div>
+            <h3>Describe what you remember</h3>
+            <p>Click the toolbar icon, press <kbd>Alt+Shift+R</kbd>, or type <kbd>rc</kbd> and a space in the address bar. Say it however it comes to mind.</p>
+          </div>
+          <div class="card">
+            <div class="step-n">3</div>
+            <h3>Get the page back</h3>
+            <p>An AI model running on your computer matches by meaning, then adds keywords and recency, and shows you the passage that matched.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-bg" aria-labelledby="features-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="features-h">Small, fast, and focused</h2>
+        </div>
+        <div class="grid3">
+          <div class="card">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Understands dates</h3>
+            <p>"Yesterday", "last week" and "in March" narrow the search automatically. You can also filter by date, website or saved pages.</p>
+          </div>
+          <div class="card">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
+            <h3>Forgives typos</h3>
+            <p>"vectr databse" still finds the vector database guide. Keyword matching tolerates misspellings and partial words.</p>
+          </div>
+          <div class="card">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
+            <h3>Save what matters</h3>
+            <p>Star a result to keep it one click away, even when you've forgotten how you first found it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-h">
+      <div class="wrap privacy">
+        <div>
+          <h2 id="privacy-h">Your browsing stays on your computer</h2>
+          <p class="lede" style="font-size:18px">Recall is built to be trusted with your history. It has no servers, so there's nowhere for your data to go.</p>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><div><b>On-device AI</b><span>The search model ships inside the extension. No cloud AI and no API calls.</span></div></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><div><b>Nothing recorded until you agree</b><span>Recall explains exactly what it collects when you install it, and waits for you to say yes.</span></div></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><div><b>Sensitive pages are skipped</b><span>Recall never runs in Incognito and never reads banking, payment, email or login pages. It ignores passwords and form inputs everywhere.</span></div></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><div><b>You're in control</b><span>Exclude sites, pause, keep titles only, export everything, or delete one page, one site, or all of it.</span></div></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><div><b>Open source</b><span>Don't take our word for it. <a href="__REPO_URL__">Read the code.</a></span></div></li>
+          </ul>
+        </div>
+        <div class="flow" aria-label="Where your data goes">
+          <div class="flow-row"><span class="k">Stored on your computer</span><span class="yes">Yes</span></div>
+          <div class="flow-row"><span class="k">Sent to Recall's servers</span><span class="no">None exist</span></div>
+          <div class="flow-row"><span class="k">Shared with or sold to anyone</span><span class="no">Never</span></div>
+          <div class="flow-row"><span class="k">Used for advertising</span><span class="no">Never</span></div>
+          <div class="flow-row"><span class="k">Account required</span><span class="no">No</span></div>
+          <div class="flow-row"><span class="k">Analytics or tracking (on this site too)</span><span class="no">None</span></div>
+          <p style="margin:16px 0 0;font-size:15px;color:var(--muted)">Read the full <a href="privacy.html">privacy policy</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="alt-bg" aria-labelledby="faq-h">
+      <div class="wrap" style="max-width:860px">
+        <h2 id="faq-h">Questions</h2>
+        <details>
+          <summary>Will it find pages I visited before installing Recall?</summary>
+          <p>Partly. Recall imports your recent Chrome history (90 days by default), so those pages are searchable by title and address straight away. Chrome doesn't keep the contents of pages, so older pages become fully searchable the next time you visit them.</p>
+        </details>
+        <details>
+          <summary>Does it slow down my browser?</summary>
+          <p>Indexing runs in the background, in small batches, after a page has finished loading. Searches typically take milliseconds. The AI model uses about 100 MB of memory while it's working and unloads itself after 10 idle minutes.</p>
+        </details>
+        <details>
+          <summary>How much disk space does it use?</summary>
+          <p>Usually tens of megabytes, even after months of browsing. Settings shows exactly how much, and you can delete anything at any time.</p>
+        </details>
+        <details>
+          <summary>Which permissions does it ask for, and why?</summary>
+          <p>Access to your history, so it can import and track the pages you visit. Optionally, it asks to read the pages you visit for full-text search; you can decline and keep titles and addresses only. A few technical permissions (scripting, tabs, alarms, offscreen, unlimited storage, favicon) let it do this in the background. Each one is explained in Settings → Permissions.</p>
+        </details>
+        <details>
+          <summary>Does it work in other languages?</summary>
+          <p>The default model is tuned for English. Settings includes a multilingual model that understands around 100 languages, including French, Portuguese and Swahili, and Shona to a limited extent.</p>
+        </details>
+        <details>
+          <summary>Is it really free?</summary>
+          <p>Yes. Core search will stay free. Recall is open source under the MIT license.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="final-h">
+      <div class="wrap">
+        <h2 id="final-h">Stop losing the good stuff.</h2>
+        <p>Install Recall once and every useful page you read from now on stays findable, even when all you remember is the gist.</p>
+        <a class="btn btn-primary" href="__STORE_URL__">Add to Chrome, it's free</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="__REPO_URL__">Source code</a>
+        <a href="__REPO_URL__/issues">Support</a>
+      </div>
+      <div>© 2026 Bruce Chigwa · MIT licensed</div>
+    </div>
+  </footer>
+
+  <script>
+    // Progressive enhancement: cycle through example searches in the hero mock-up.
+    (function () {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var demos = [
+        { q: 'that AI tutor website I visited in Zimbabwe', meta: '2 results · 38 ms',
+          r1: ['LearnZim: smart learning for every student', 'learnzim.example · Visited 3 days ago', '…gives secondary school students in <mark>Zimbabwe</mark> a personal <mark>AI tutor</mark> that explains maths and science step by step…'],
+          r2: ['The promise and limits of AI in African classrooms', 'edresearch.example · Visited last week'] },
+        { q: 'how do vector databases find similar items', meta: '3 results · 24 ms',
+          r1: ['What is a vector database? A visual guide', 'vectorguide.example · Visited yesterday', '…a <mark>vector</mark> <mark>database</mark> stores those embeddings and finds the nearest neighbours to a query using indexes such as HNSW…'],
+          r2: ['10 ways to speed up slow SQL queries', 'sqlperf.example · Visited 2 weeks ago'] },
+        { q: 'deploying next.js with pm2 last week', meta: '1 result · Visited last week · 19 ms',
+          r1: ['Deploy a Next.js app on Ubuntu with PM2 and Nginx', 'devnotes.example · Visited last week', '…start it with <mark>pm2</mark> start npm --name web -- start, save the process list, and put Nginx in front as a reverse proxy…'],
+          r2: ['Kubernetes in plain English', 'cloudbasics.example · Visited last month'] }
+      ];
+      var el = function (id) { return document.getElementById(id); };
+      var typed = el('typed'), i = 0;
+      function show(d) {
+        el('meta').textContent = d.meta;
+        el('r1t').textContent = d.r1[0]; el('r1d').textContent = d.r1[1]; el('r1p').innerHTML = d.r1[2];
+        el('r2t').textContent = d.r2[0]; el('r2d').textContent = d.r2[1];
+        ['r1', 'r2'].forEach(function (id) { el(id).style.opacity = ''; el(id).style.transform = ''; });
+      }
+      function hide() { ['r1', 'r2', 'meta'].forEach(function (id) { el(id).style.opacity = '0'; }); el('r1').style.transform = 'translateY(6px)'; }
+      function type(text, done) {
+        var n = 0; typed.textContent = '';
+        (function step() { typed.textContent = text.slice(0, ++n); if (n < text.length) setTimeout(step, 38 + Math.random() * 40); else setTimeout(done, 350); })();
+      }
+      function next() {
+        i = (i + 1) % demos.length; hide();
+        setTimeout(function () { type(demos[i].q, function () { show(demos[i]); el('meta').style.opacity = ''; setTimeout(next, 4200); }); }, 400);
+      }
+      setTimeout(next, 4200);
+    })();
+  </script>
+</body>
+</html>
